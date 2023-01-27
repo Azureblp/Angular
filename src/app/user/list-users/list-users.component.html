@@ -1,0 +1,29 @@
+
+<!-- <mat-list *ngFor="let user of listUser">
+    <mat-list-item>  {{user.name}} </mat-list-item>
+</mat-list> -->
+<span style="color:rgb(13 156 239 / 98%); margin-left: 50px;  font-size: 16px;" *ngIf="listUser">Total User</span> ({{listUser.length}})
+<table >
+    
+    <thead class="tableheader">
+        <tr>
+            <th >Name</th>
+            <th >Edit</th>
+            <th>Delete</th>
+            <th>View</th>
+          </tr>
+        
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let user of listUser ">
+            
+            <td>{{user.name}}</td>
+            <td><button type="button" class="btn btn-primary" style="border:0px;border-radius:3px;  " [routerLink]="['/user/edit','userid']">Edit</button></td>
+            <td><button type="button" class="btn btn-primary" style="border:0px;border-radius:3px;  " [routerLink]="['/user/delete','userid']">Delete</button></td>
+            <td><button type="button" class="btn btn-primary" style="border:0px;border-radius:3px;  " [routerLink]="['/user/view','userid']">View</button></td>
+        </tr>
+    </tbody>
+   
+  </table>
+  

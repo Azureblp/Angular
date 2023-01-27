@@ -1,0 +1,11 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+ ::ng-deep.example-icon{
+    border: 0px;
+    outline: 0px;
+    margin-right: 10px;
+    border-radius: 2px;
+    padding: 4px 6px;
+    height: 32px;
+ }

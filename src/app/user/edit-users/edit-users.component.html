@@ -1,0 +1,76 @@
+<button class="btn btn-primary" (click)="open(content)" style="margin: 22px;">Add employeee</button>
+
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Employee Details</h4>
+		<button type="button" class="btn btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"><i class="fa fa-times" aria-hidden="true"></i></button>
+	</div>
+	<div class="modal-body">
+		<form>
+			<div class="form-floating mb-3">
+                <label for="floatingInput">Employee Name</label>
+                <input type="text" class="form-control" id="floatingInput" placeholder="Ex:Adam Smith">
+            </div>
+            <div class="form-floating mb-3">
+                <label for="floatingPassword">Employee ID</label>
+                <input type="text" class="form-control" id="floatingPassword" placeholder="Ex:EMP234">
+              </div>
+              <div class="form-floating mb-3">
+                <label for="floatingPassword">Date of Birth</label>
+                <input type="date" class="form-control" id="floatingPassword" placeholder="DD-MM-YYYY">
+              </div>
+            <div class="mb-3">
+				<label for="gender">Gender</label>
+				<div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                    <label class="form-check-label" for="male">
+                      Male
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                    <label class="form-check-label" for="female">
+                      Female
+                    </label>
+                  </div>
+			</div>
+            <div class="form-floating mb-3">
+                <label for="floatingPassword ">Employee ID</label>
+                <input type="file" class="form-control" style="line-height: 20px; cursor: pointer;" id="floatingPassword"  (change)="fileChangeEvent($event)">
+              </div>
+              <div class="form-floating mb-3">
+                <image-cropper
+                [imageChangedEvent]="imageChangedEvent"
+                [maintainAspectRatio]="true"
+                [aspectRatio]="4 / 3"
+                format="jpeg"
+                (imageCropped)="imageCropped($event)"
+                
+                (cropperReady)="cropperReady()"
+                (loadImageFailed)="loadImageFailed()"
+            ></image-cropper>
+              </div>
+             
+ 
+
+<img [src]="croppedImage" />
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-primary" (click)="modal.close('Save click')">Save</button>
+	</div>
+</ng-template>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class=" col-sm-3 col-md-3 col-lg-3 p-1 " *ngFor="let item of employeedetails ">
+            <ng-container class="row">
+             <app-employee-card [data]="item"></app-employee-card>
+            </ng-container>
+            </div>
+        
+
+    </div>
+
+</div>

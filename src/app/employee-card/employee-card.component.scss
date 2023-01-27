@@ -1,0 +1,62 @@
+.empCard{
+    // background-color: #ffff;
+    background-color: #ffff;
+    border-radius: 5px;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // padding: 48px 0px;
+    // background-color: #d6e7f4;
+    // border:3px solid  #d6e7f4
+    // box-shadow: 3px 3px 3px 3px #f8f8f8;
+}
+.imagecontiner{
+    display: flex;
+    justify-content: center;
+    
+}
+.image{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    // margin-top: -46px;
+    border: 4px solid #2A7CF6;
+}
+.employeeDetail{
+   display: flex;
+    justify-content: space-around;
+
+}
+.head{
+    display: grid;
+}
+.flex{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+.bodyvalue{
+    color: #2A7CF6;
+    font-weight: 400;
+}
+.value{
+    padding-bottom: 6px;
+}
+
+.empname{
+    color: #2A7CF6;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+.button{
+    background-color: #2A7CF6;
+    color:#ffff;
+    outline: 0px;
+    border-radius: 5px;
+    border: 0;
+    width: 100%;
+    height: 35px;
+}

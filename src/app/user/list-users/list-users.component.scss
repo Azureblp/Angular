@@ -1,0 +1,20 @@
+table{
+    width:50%;
+    
+}
+table,th,td{
+    border-collapse: collapse;
+    margin-left: 50px;
+    border: 2px solid blue;
+}
+
+
+th{
+    background-color: bisque;
+    text-align: center;
+    height:40px;
+}
+td{
+    height:44px;
+    text-align: center;
+}
